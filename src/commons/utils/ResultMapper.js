@@ -8,6 +8,8 @@ class ResultMapper {
   }
 
   static objectToCamelCase(obj) {
+    if (!obj) return null;
+
     const newObj = {};
     Object.keys(obj).forEach(key => {
       newObj[this.toCamelCase(key)] = obj[key];
@@ -16,6 +18,8 @@ class ResultMapper {
   }
 
   static objectToSnakeCase(obj) {
+    if (!obj) return null;
+
     const newObj = {};
     Object.keys(obj).forEach(key => {
       newObj[this.toSnakeCase(key)] = obj[key];
