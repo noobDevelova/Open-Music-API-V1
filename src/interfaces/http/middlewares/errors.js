@@ -16,7 +16,6 @@ const errorHandler = {
         if (response instanceof ClientError) {
           return ResponseBuilder.fail(h, {
             message: response.message,
-            code: response.statusCode,
           });
         }
         return ResponseBuilder.error(h, {
